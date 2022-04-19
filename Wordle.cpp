@@ -111,7 +111,8 @@ int main()
 					cout << guess;
 					playing = false;
 				}
-				else if (find(dictionary.begin(), dictionary.end(), word) != dictionary.end())
+				else if (find(dictionary.begin(), dictionary.end(), word) != dictionary.end()) // feedback: you already searched dictionary once,
+																							// when set dWord value, seems unnecessary to do it again.
 				{
 					stringstream sstream;
 					for (size_t i = 0; i < guess.length(); i++)
